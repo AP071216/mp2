@@ -1,26 +1,25 @@
 /**
  * Functions needed:
  * makeCard()
- * shuffleCards()
+ * shuffleCards() done
  * cardClicked()
- * startGame()
+ * startGame() done
  * resetGame()
  */
 
 // Set game values and constants
-document.addEventListener('DOMContentLoaded', () => {
-    const gameContainer = document.querySelector('.game-container');
-    const triesCount = document.getElementById('tries-count');
-    const resetButton = document.getElementById('reset-btn');
-    const colors = [
-        '#e9162d', '#f28200', '#ffdb28', '#1fb819',
-        '#00e1da', '#007bd8', '#8f2be7', '#fb4fd9'
-    ];
-    let cardValues = [...colors, ...colors];
-    let flippedCards = [];
-    let matchedPairs = 0;
-    let tries = 0;
-});
+const gameContainer = document.querySelector('.game-container');
+const triesCountSpan = document.getElementById('tries-count');
+const resetButton = document.getElementById('reset-btn');
+const colors = [
+    '#e9162d', '#f28200', '#ffdb28', '#1fb819',
+    '#00e1da', '#007bd8', '#8f2be7', '#fb4fd9'
+];
+let cardValues = [...colors, ...colors];
+let flippedCards = [];
+let matchedPairs = 0;
+let tries = 0;
+
 
 /**
  * Shuffles the cards when the game is started
@@ -33,3 +32,23 @@ function shuffleCards(array) {
     return array;
 }
 
+ /**
+ * Starts the game
+ */
+function startGame() {
+        // Clear previous grid
+        gameContainer.innerHTML = '';
+        flippedCards = [];
+        matchedPairs = 0;
+        tries = 0;
+        triesCountSpan.textContent = tries;
+        
+        // Shuffle and create new cards
+        shuffleCards(cardValues);
+        cardValues.forEach(color => {
+            const card = makeCard(color);
+            gameContainer.appendChild(card);
+        });
+    }
+
+startGame()
