@@ -24,7 +24,7 @@ p {
     text-align: center;
 }
 
-#reset-button {
+#reset-btn {
     padding: 10px 10px;
     font-size: 1.2em;
     cursor: pointer;
@@ -35,7 +35,7 @@ p {
     transition: background-color 0.2s;
 }
 
-#reset-button:hover {
+#reset-btn:hover {
     background-color: #2c3e50;
 }
 
