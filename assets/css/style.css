@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
-  --primary-color: #d81e5b;
+  --primary-color: #e42766;
   --secondary-color: #eb5e55;
   --text-color: #3a3335;
   --border-color: #2a3d38;
@@ -52,7 +52,7 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
-    padding: 20px;
+    padding: 10px;
     border: 5px solid var(--border-color);
     border-radius: 20px;
     background-color: #fff;

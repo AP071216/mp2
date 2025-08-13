@@ -2,6 +2,7 @@
 const gameContainer = document.querySelector('.game-container');
 const triesCountSpan = document.getElementById('tries-count');
 const resetButton = document.getElementById('reset-btn');
+const bestTriesSpan = document.getElementById('best-tries-count');
 const colors = [
     '#af0c1fff', '#f28200', '#ffdb28', '#1fb819',
     '#00e1da', '#007bd8', '#8f2be7', '#fb4fd9'
@@ -10,6 +11,7 @@ let cardValues = [...colors, ...colors];
 let flippedCards = [];
 let matchedPairs = 0;
 let tries = 0;
+let bestTries = localStorage.getItem('bestTries') ? parseInt(localStorage.getItem('bestTries')) : null;
 
 
 /**
@@ -47,49 +49,57 @@ function makeCard(color) {
 
         card.addEventListener('click', cardClicked);
         return card;
-    }
+}
 
 /** 
  * Handles when cards are clicked and manages the game logic
 */
-    function cardClicked(event) {
-        const card = event.currentTarget;
-        
-        // Nothing happens if a card is flipped or already matched
-        if (card.classList.contains('flipped') || flippedCards.length === 2) {
-            return;
-        }
+function cardClicked(event) {
+    const card = event.currentTarget;
 
-        card.classList.add('flipped');
-        flippedCards.push(card);
+    // Nothing happens if a card is flipped or already matched
+    if (card.classList.contains('flipped') || flippedCards.length === 2) {
+        return;
+    }
 
-        if (flippedCards.length === 2) {
-            tries++;
-            triesCountSpan.textContent = tries;
+    card.classList.add('flipped');
+    flippedCards.push(card);
 
-            const [card1, card2] = flippedCards;
-            if (card1.dataset.color === card2.dataset.color) {
-                // If a match is found
-                setTimeout(() => {
-                    card1.querySelector('.card-inner').classList.add('matched-animation');
-                    card2.querySelector('.card-inner').classList.add('matched-animation');
-                    flippedCards = [];
-                    matchedPairs++;
-                    if (matchedPairs === colors.length) {
-                        // If all pairs are matched
+    if (flippedCards.length === 2) {
+        tries++;
+        triesCountSpan.textContent = tries;
+
+        const [card1, card2] = flippedCards;
+        if (card1.dataset.color === card2.dataset.color) {
+            // If a match is found
+            setTimeout(() => {
+                card1.querySelector('.card-inner').classList.add('matched-animation');
+                card2.querySelector('.card-inner').classList.add('matched-animation');
+                flippedCards = [];
+                matchedPairs++;
+                if (matchedPairs === colors.length) {
+                    // If all pairs are matched
+                    // Update and save the best score here
+                    if (bestTries === null || tries < bestTries) {
+                        bestTries = tries;
+                        localStorage.setItem('bestTries', bestTries);
+                        bestTriesSpan.textContent = bestTries;
+                        setTimeout(() => alert(`New Best Score! You won in ${tries} tries!`), 800);
+                    } else {
                         setTimeout(() => alert(`Congratulations! You won in ${tries} tries!`), 800);
                     }
-                }, 800);
-            } else {
-                // If no match is found
-                setTimeout(() => {
-                    card1.classList.remove('flipped');
-                    card2.classList.remove('flipped');
-                    flippedCards = [];
-                }, 800);
-            }
+                }
+            }, 800);
+        } else {
+            // If no match is found
+            setTimeout(() => {
+                card1.classList.remove('flipped');
+                card2.classList.remove('flipped');
+                flippedCards = [];
+            }, 800);
         }
     }
+}
 
  /**
  * Starts the game
@@ -101,6 +111,8 @@ function startGame() {
         matchedPairs = 0;
         tries = 0;
         triesCountSpan.textContent = tries;
+
+        bestTriesSpan.textContent = bestTries !== null ? bestTries : 'N/A';
         
         // Shuffle and create new cards
         shuffleCards(cardValues);
