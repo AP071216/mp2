@@ -1,6 +1,14 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+:root {
+  --primary-color: #d81e5b;
+  --secondary-color: #eb5e55;
+  --text-color: #3a3335;
+  --border-color: #2a3d38;
+
+}
+
 /* Global styles */
 body {
     font-family: 'Quicksand', sans-serif;
@@ -10,8 +18,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background-color: lightblue;
-    color: #424242;
+    background-color: #ffbbb6;
+    color: var(--text-color);
 }
 
 h1 {
@@ -28,15 +36,15 @@ p {
     padding: 10px 10px;
     font-size: 1.2em;
     cursor: pointer;
-    border: 1.5px solid #2c3e50;
+    border: 1.5px solid var(--border-color);
     border-radius: 15px 5px;
-    background-color: #355883;
+    background-color: var(--secondary-color);
     color: #fff;
     transition: background-color 0.2s;
 }
 
 #reset-btn:hover {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
 }
 
 /* Game styling - Check styling once cards are visible */
@@ -45,7 +53,7 @@ p {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
     padding: 20px;
-    border: 5px solid #355883;
+    border: 5px solid var(--border-color);
     border-radius: 20px;
     background-color: #fff;
 }
@@ -83,20 +91,20 @@ p {
 }
 
 .card-front {
-    background-color: #355883;
     transform: rotateY(180deg);
-    border: 1px solid #2c3e50;
+    border: 1px solid var(--border-color);
 }
 
 .card-back {
-    background-color: #355883;
-    border: 2px solid #2c3e50;
+    background-color: var(--primary-color);
+    border: 2px solid var(--border-color);
 }
 
 .matched-animation {
     animation: pulse 0.5s ease-in-out;
 }
 
+/* Media queries for responsive design at different screen sizes */
 @media screen and (min-width: 1024px) {
     .game-container {
         grid-template-columns: repeat(4, 120px);

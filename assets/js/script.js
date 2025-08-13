@@ -1,12 +1,3 @@
-/**
- * Functions needed:
- * makeCard() done
- * shuffleCards() done
- * cardClicked()
- * startGame() done
- * resetGame()
- */
-
 // Set game values and constants
 const gameContainer = document.querySelector('.game-container');
 const triesCountSpan = document.getElementById('tries-count');
