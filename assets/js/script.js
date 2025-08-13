@@ -65,7 +65,7 @@ function makeCard(color) {
         const card = event.currentTarget;
         
         // Nothing happens if a card is flipped or already matched
-        if (card.classList.contains('flipped') || card.classList.contains('matched') || flippedCards.length === 2) {
+        if (card.classList.contains('flipped') || flippedCards.length === 2) {
             return;
         }
 
@@ -80,8 +80,6 @@ function makeCard(color) {
             if (card1.dataset.color === card2.dataset.color) {
                 // If a match is found
                 setTimeout(() => {
-                    card1.classList.add('matched');
-                    card2.classList.add('matched');
                     card1.querySelector('.card-inner').classList.add('matched-animation');
                     card2.querySelector('.card-inner').classList.add('matched-animation');
                     flippedCards = [];
