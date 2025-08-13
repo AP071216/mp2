@@ -84,9 +84,10 @@ function cardClicked(event) {
                         bestTries = tries;
                         localStorage.setItem('bestTries', bestTries);
                         bestTriesSpan.textContent = bestTries;
-                        setTimeout(() => alert(`New Best Score! You won in ${tries} tries!`), 800);
+                        // Add message to span
+                        document.getElementById('game-message').textContent = `New Best Score! You won in ${tries} tries!`;
                     } else {
-                        setTimeout(() => alert(`Congratulations! You won in ${tries} tries!`), 800);
+                        document.getElementById('game-message').textContent = `Congratulations! You won in ${tries} tries!`;
                     }
                 }
             }, 800);
@@ -111,6 +112,7 @@ function startGame() {
         matchedPairs = 0;
         tries = 0;
         triesCountSpan.textContent = tries;
+        document.getElementById('game-message').textContent = '';
 
         bestTriesSpan.textContent = bestTries !== null ? bestTries : 'N/A';
         
@@ -125,4 +127,4 @@ function startGame() {
 // Reset button functionality
 resetButton.addEventListener('click', startGame);
 
-startGame()
+startGame();
