@@ -1,6 +1,6 @@
 /**
  * Functions needed:
- * makeCard()
+ * makeCard() done
  * shuffleCards() done
  * cardClicked()
  * startGame() done
@@ -56,6 +56,50 @@ function makeCard(color) {
 
         card.addEventListener('click', cardClicked);
         return card;
+    }
+
+/** 
+ * Handles when cards are clicked and manages the game logic
+*/
+    function cardClicked(event) {
+        const card = event.currentTarget;
+        
+        // Nothing happens if a card is flipped or already matched
+        if (card.classList.contains('flipped') || card.classList.contains('matched') || flippedCards.length === 2) {
+            return;
+        }
+
+        card.classList.add('flipped');
+        flippedCards.push(card);
+
+        if (flippedCards.length === 2) {
+            tries++;
+            triesCountSpan.textContent = tries;
+
+            const [card1, card2] = flippedCards;
+            if (card1.dataset.color === card2.dataset.color) {
+                // If a match is found
+                setTimeout(() => {
+                    card1.classList.add('matched');
+                    card2.classList.add('matched');
+                    card1.querySelector('.card-inner').classList.add('matched-animation');
+                    card2.querySelector('.card-inner').classList.add('matched-animation');
+                    flippedCards = [];
+                    matchedPairs++;
+                    if (matchedPairs === colors.length) {
+                        // If all pairs are matched
+                        setTimeout(() => alert(`Congratulations! You won in ${tries} tries!`), 800);
+                    }
+                }, 800);
+            } else {
+                // If no match is found
+                setTimeout(() => {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    flippedCards = [];
+                }, 800);
+            }
+        }
     }
 
  /**
