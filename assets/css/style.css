@@ -87,12 +87,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #355883;
 }
 
 .card-front {
     transform: rotateY(180deg);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
 }
 
 .card-back {
@@ -102,6 +101,9 @@ p {
 
 .matched-animation {
     animation: pulse 0.5s ease-in-out;
+}
+.card.flipped {
+    padding-left: 4px;
 }
 
 /* Media queries for responsive design at different screen sizes */
