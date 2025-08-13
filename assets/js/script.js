@@ -32,6 +32,32 @@ function shuffleCards(array) {
     return array;
 }
 
+/**
+ * Creates a card element with the given color 
+ */
+function makeCard(color) {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.dataset.color = color;
+
+        const cardInner = document.createElement('div');
+        cardInner.classList.add('card-inner');
+
+        const cardFront = document.createElement('div');
+        cardFront.classList.add('card-front');
+        cardFront.style.backgroundColor = color;
+
+        const cardBack = document.createElement('div');
+        cardBack.classList.add('card-back');
+
+        cardInner.appendChild(cardFront);
+        cardInner.appendChild(cardBack);
+        card.appendChild(cardInner);
+
+        card.addEventListener('click', cardClicked);
+        return card;
+    }
+
  /**
  * Starts the game
  */
