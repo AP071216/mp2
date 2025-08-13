@@ -121,4 +121,7 @@ function startGame() {
         });
     }
 
+// Reset button functionality
+resetButton.addEventListener('click', startGame);
+
 startGame()
