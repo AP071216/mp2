@@ -15,25 +15,26 @@ Pixel Pairs is designed for users of all ages to be able to put their memory ski
 
 1. [UX](#ux)
     - [User Stories](#user-stories)
-2. [Design](#design)
+2. [Gameplay](#gameplay)
+3. [Design](#design)
     - [Colours](#colours)
     - [Fonts](#fonts)
     - [Icons](#icons)
-3. [Wireframes](#wireframes)
+4. [Wireframes](#wireframes)
     - [Main Page](#main-page)
-4. [Deployment](#deployment)
+5. [Deployment](#deployment)
     - [Repository](#repository)
     - [Hosting](#hosting)
-5. [Features](#features)
-6. [Testing](#testing)
+6. [Features](#features)
+7. [Testing](#testing)
     - [Browser testing](#browser-testing)
     - [Responsive testing](#responsive-testing)
     - [HTML validation](#html-validator)
     - [CSS validation](#css-validator)
     - [JS validation](#js-validator)
     - [Lighthouse](#lighthouse)
-7. [Technologies Used](#technologies-used)
-8. [Credits and References](#credits-and-references)
+8. [Technologies Used](#technologies-used)
+9. [Credits and References](#credits-and-references)
 
 ## UX
 
@@ -51,6 +52,16 @@ As a user who wants to test my memory, I want:
 7. A best tries count so I can aim to beat my record
 8. A reset button to reset the game at the end of a round
 9. Distinct colours to easily differentiate the cards once flipped
+
+## Gameplay
+
+How to play:
+1. The game starts with all 16 cards face-down.
+2. Click on any card to flip it over and reveal its color.
+3. Click on a second card.
+4. If the two cards match, they will remain face-up.
+5. If they do not match, they will flip back over after a short delay, and you can try again.
+6. The goal is to find all 8 matching pairs in the fewest number of tries.
 
 ## Design
 
