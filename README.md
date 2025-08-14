@@ -96,7 +96,21 @@ In order to keep good game functionality, it was important to keep the page layo
 
 ### Repository
 
+1. Intially I created a public repository on my Github account and copied this to my repository on Visual Studio using the following commands
+    - git config --global user.name (add username)
+    - git config --global user.email (add email)
+    - git config --list
+2. Throughout my work on the project, I regularly committed my work to github using the following commands
+    - git add .
+    - git commit -m "Consise message detailing what was changed"
+3. After several commits were made, I then pushed my work to Github using:
+    - git push
+
 ### Hosting
+
+1. On conception of the project and having completed the initial coding work for the project, I went onto my project repository on github to set up for deployment
+2. I went into Settings > Pages and ensured that "Deploy from a branch" was selected the main branch was the branch chosen then pressed save and waited for deployment
+3. Once deployed I made sure everything was working as observed in my preview browser to ensure files were properly uploaded
 
 ## Features
 
