@@ -114,7 +114,45 @@ In order to keep good game functionality, it was important to keep the page layo
 
 ## Features
 
+### Game container
+
+On both mobile and desktop the game container appears the same. This serves as the environment on the website to play the game. It involves a 4x4 grid of boxes (cards) which flip once clicked. It has a rounded edge in two corners and a sharper edge on the other two to create a more interesting appearance without affecting gameplay.
+
+![Game container](assets/images/game-container.png)
+
+### Cards
+
+The cards appear the same on all screensizes however are slightly smaller to fit the smaller grid. They have a pink back which shows before they are flipped, and a color that has been selected randomly through javascript functions. They are animated with a flip motion to create a more fun and interactive gameplay. Once flipped, if they don't match, they will stay shown for a brief duration then flip back. If they match, they will stay flipped and you can continue with the game.
+
+![Unflipped cards](assets/images/cards2.png)
+![Flipped cards](assets/images/cards1.png)
+
+### Tries counter
+
+Below the games container is a counter for the number of tries the player has made, this updates every turn. When the game is reset, the tries counter resets to zero.
+
+### Best tries count
+
+The best tries counter changes at the end of the game, it updates only if the tries counter number is less than the current best tries count. If the game has never been played an N/A will appear. As the best tries count is saved to local storage on the browser, this allows the player to refresh the page and the count will save their best tries and display the number acordingly. 
+
+![Tries and best tries counter](assets/images/tries-best-tries-counter.png)
+
+### Reset Button
+
+At the bottom of the page, there is a button that resets the game back to the start. This provides a new random shuffle of the cards, returns all the cards to a flipped state and resets the tries count to zero.
+
+![Reset button](assets/images/reset-button.png)
+
+### Congratulations message
+
+On completion of the game, a message will appear above the game container. There are two different messages that will show depending on the outcome of the finished game. "New Best Score! You won in X tries!" or "Congratulations! You won in X tries!". If the number of tries taken is lower than the current best score, the first message will pop up, else, it will show the second message.
+
+![New best message](assets/images/new-best-message.png)
+![Congratulations message](assets/images/congratulations-message.png)
+
 ## Testing
+
+### Manual Testing
 
 ### Browser Testing
 
