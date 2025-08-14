@@ -76,6 +76,11 @@ Fontawesome allowed me to find a suitable favicon for the document title, I chos
 
 ### Main Page
 
+In order to keep good game functionality, it was important to keep the page layout the same on a mobile as it would be on a larger screen size. In order to do this I kept the same grid layout but made the cards smaller which allowed the grid to fit on a mobile device.
+
+![Wireframe - Desktop](/assets/images/wireframe-desktop.png)
+![Wireframe - Mobile](assets/images/wireframe-mobile.png)
+
 ## Deployment
 
 ### Repository
