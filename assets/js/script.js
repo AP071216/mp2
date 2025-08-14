@@ -4,7 +4,7 @@ const triesCountSpan = document.getElementById('tries-count');
 const resetButton = document.getElementById('reset-btn');
 const bestTriesSpan = document.getElementById('best-tries-count');
 const colors = [
-    '#af0c1fff', '#f28200', '#ffdb28', '#1fb819',
+    '#af0c1f', '#f28200', '#ffdb28', '#1fb819',
     '#00e1da', '#007bd8', '#8f2be7', '#fb4fd9'
 ];
 let cardValues = [...colors, ...colors];
