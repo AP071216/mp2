@@ -70,7 +70,7 @@ I used google fonts to find a clean and easy to read font and decided on "Quicks
 
 Fontawesome allowed me to find a suitable favicon for the document title, I chose a chessboard as this provided a similar grid to the game board in the game.
 
-![Game icon](/assets/images/chess-board-solid-full.svg)
+![Game icon](/assets/images/icon.png)
 
 ## Wireframes
 
