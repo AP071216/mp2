@@ -189,6 +189,8 @@ To aid in debugging my code throughout, and ensuring everything worked as expect
 
 Desktop lighthouse report
 
+When I first ran lighthouse in dev tools, whilst accessibility was still high, it brought up contrast issues on the button as the background was slightly too dark to contrast well with the dark text. I corrected this by lightening the secondary color variable in my CSS file which brought the accessibility report back to 100 without disrupting the overall look of the website.
+
 ![Desktop Lightouse Report](assets/images/desktop-lighthouse.png)
 
 Mobile lighthouse report
@@ -199,8 +201,16 @@ Mobile lighthouse report
 
 ### Languages
 
+For this project, I used HTML, CSS and JavaScript
+
 ### Technology
 
+Github and Visual Studio
+
 ## Credits and References
+
+In order to build the website, I used the following resources:
+- Fontawesome to create the favicon displayed in the browser tab
+- Google fonts to change the font of the website, I imported "Quicksand"
 
 
