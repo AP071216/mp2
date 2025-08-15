@@ -154,16 +154,31 @@ On completion of the game, a message will appear above the game container. There
 
 ### Manual Testing
 
+To aid in debugging my code throughout, and ensuring everything worked as expected I used python tutor to go through my code step by step to find where issues had arrisen. I regularly checked that variables were being updated or changed correctly using console.log in my code and viewing the output in the dev tools console in the browser. Following completion of the website I manually tested to confirm user stories were being met and the game was working as expected.
+
+1. Clicking a card to make sure it turned over to reveal the color
+2. Clicking a different card that didn't match to check that both cards would flip back over
+3. On flipping two matching cards, they should remain flipped but keep the color visible 
+4. After both cards have been flipped, the tries counter should update by 1 
+5. Once all pairs have been found, the correct congratulations message appeared
+6. If tries counter < best tries counter, then best tries should update and "New Best" message will be sent
+7. Pressing the reset button flips all cards back over and on flipping a card, a different color to last round should be seen, confirming the shuffle function is working correctly
+8. If a card is clicked once turned over, nothing happens
+9. Clicking on two different already flipped cards doesn't update the tries count
+10. If the page is refreshed, best tries count remains displaying the correct value instead of resetting
+11. Animation of the card flipping is smooth and not distracting
+12. Time delay on flipping the cards back over if they don't match is not too long to slow gameplay but not too fast to make it too difficult to remember
+
 ### Browser Testing
 
 ### Responsive testing
 
 ### HTML Validator
-
+![HTML validation](assets/images/html-validation.png)
 ### CSS Validator
-
+![CSS validation](assets/images/css-validation.png)
 ### JS Validator
-
+![JS validation](assets/images/js-validation.png)
 ### Lighthouse
 
 ## Technologies used
