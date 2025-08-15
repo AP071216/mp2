@@ -174,12 +174,26 @@ To aid in debugging my code throughout, and ensuring everything worked as expect
 ### Responsive testing
 
 ### HTML Validator
+
 ![HTML validation](assets/images/html-validation.png)
+
 ### CSS Validator
+
 ![CSS validation](assets/images/css-validation.png)
+
 ### JS Validator
+
 ![JS validation](assets/images/js-validation.png)
+
 ### Lighthouse
+
+Desktop lighthouse report
+
+![Desktop Lightouse Report](assets/images/desktop-lighthouse.png)
+
+Mobile lighthouse report
+
+![Mobile Lightouse Report](assets/images/mobile-lighthouse.png)
 
 ## Technologies used
 
