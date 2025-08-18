@@ -171,19 +171,80 @@ To aid in debugging my code throughout, and ensuring everything worked as expect
 
 ### Browser Testing
 
+<table>
+  <thead>
+    <tr>
+      <th>Browser</th>
+      <th>Device/Operating system</th>
+      <th>Appearance</th>
+      <th>Responsiveness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td>Google pixel 9 and Windows 11</td>
+      <td>Page formats correctly, game works as expected and grid fits the screen</td>
+      <td>Great</td>
+    </tr>
+    <tr>
+       <td>Safari</td>
+       <td>Iphone 15 and Sequoia 15.6</td>
+      <td>Page formats correctly, game works as expected and grid fits the screen</td>
+      <td>Great</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td>Samsung Galaxy S23 and Windows 11</td>
+      <td>Page formats correctly, game works as expected and grid fits the screen</td>
+      <td>Great</td>
+    </tr>
+ 
+  </tbody>
+</table>
+
 ### Responsive testing
+
+Min width 320px
+- 4x4 grid in the center of the screen
+- No overlap of elements on the page
+- Text is aligned well and an easy to read size
+
+Min width 425px
+- 4x4 grid in the center of the screen
+- No overlap of elements on the page
+- Text is aligned well and an easy to read size
+- Grid boxes slightly larger than 320px to account for the extra space
+
+Min width 768px
+- 4x4 grid in the center of the screen
+- No overlap of elements on the page
+- Text is aligned well and an easy to read size
+- Grid boxes slightly larger than 425px to account for the extra space
+
+Min width 1024px 
+- 4x4 grid in the center of the screen
+- No overlap of elements on the page
+- Text is aligned well and an easy to read size
+- Grid boxes at their largest for the larger screen sizes
 
 ### HTML Validator
 
 ![HTML validation](assets/images/html-validation.png)
 
+No errors or warnings
+
 ### CSS Validator
 
 ![CSS validation](assets/images/css-validation.png)
 
+No errors or warnings
+
 ### JS Validator
 
 ![JS validation](assets/images/js-validation.png)
+
+No errors or warnings
 
 ### Lighthouse
 
