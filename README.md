@@ -27,6 +27,7 @@ Pixel Pairs is designed for users of all ages to be able to put their memory ski
     - [Hosting](#hosting)
 6. [Features](#features)
 7. [Testing](#testing)
+    - [Manual Testing](#manual-testing)
     - [Browser testing](#browser-testing)
     - [Responsive testing](#responsive-testing)
     - [HTML validation](#html-validator)
@@ -111,6 +112,8 @@ In order to keep good game functionality, it was important to keep the page layo
 1. On conception of the project and having completed the initial coding work for the project, I went onto my project repository on github to set up for deployment
 2. I went into Settings > Pages and ensured that "Deploy from a branch" was selected the main branch was the branch chosen then pressed save and waited for deployment
 3. Once deployed I made sure everything was working as observed in my preview browser to ensure files were properly uploaded
+
+![Github Deployment](assets/images/deployment.png)
 
 ## Features
 
