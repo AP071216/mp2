@@ -109,9 +109,25 @@ In order to keep good game functionality, it was important to keep the page layo
 
 ### Hosting
 
-1. On conception of the project and having completed the initial coding work for the project, I went onto my project repository on github to set up for deployment
-2. I went into Settings > Pages and ensured that "Deploy from a branch" was selected the main branch was the branch chosen then pressed save and waited for deployment
-3. Once deployed I made sure everything was working as observed in my preview browser to ensure files were properly uploaded
+To deploy the site:
+1. Sign into github in order to access the repository of the project
+2. Select the desired repository for deployment
+3. Access settings and select the pages button which shows the build and deployment section
+4. Within this section, select from the "source" dropdown, the "deploy from branch" option
+5. Then under branch select "main" branch and "/(root)" directory 
+6. The site is now deployed but may take a few minutes to become live
+
+To fork the repository:
+1. Sign into github
+2. Select the desired repository
+3. Select the fork button 
+
+To clone the repository:
+1. Sign into github
+2. Select the desired repository
+3. Press the code button which produces a dropdown menu 
+4. Select either HTTPS, SSH or GitHub CLI and copy the link provided
+5. Open terminal and type git clone followed by the url copied in step 4 and press enter
 
 ![Github Deployment](assets/images/deployment.png)
 
