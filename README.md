@@ -171,6 +171,8 @@ On completion of the game, a message will appear above the game container. There
 
 ## Testing
 
+Manual and automatic testing are key parts of the development lifecycle and both are used throughout. Manual testing is used to test from the user side. It allows developers to try out features and see how they look from the users perspective as well as observing the stylistic and creative features in the code that can't be tested through automation. Automated testing uses tools and scripts to execute predefined tests which compare actual results to expected outcomes. As code is written and rewritten, it ensures that previous code hasn't been affected and that the code still runs as expected. 
+
 ### Manual Testing
 
 To aid in debugging my code throughout, and ensuring everything worked as expected I used python tutor to go through my code step by step to find where issues had arrisen. I regularly checked that variables were being updated or changed correctly using console.log in my code and viewing the output in the dev tools console in the browser. Following completion of the website I manually tested to confirm user stories were being met and the game was working as expected.
